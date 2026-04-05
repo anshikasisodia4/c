@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+     int main(){
+       int n,sum=0 , r, i;
+       printf("enter number:");
+       scanf("%d",&n);
+       for(i=n;i>0;i=i/10){
+        r=i%10;
+        sum=sum+r;
+       }printf("sum of digits is %d",sum);
+        return 0;
+     }
