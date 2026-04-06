@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+     int main(){
+      int n, first=0 ,second=1 ,next;
+
+      printf("enter number:");
+      scanf("%d",&n);
+      printf("fibonacci series is :\n");
+
+      for(int i=0;i<n;i++){
+        if(i==0){
+          printf("%d\t",first);
+        }else if( i==1){
+          printf("%d\t",second);
+
+        }else{
+          next= first +second;
+          printf("%d\t",next);
+          first=second;
+          second=next;
+        }
+      }
+      return 0;
+      }
