@@ -1,0 +1,33 @@
+
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+  int n, original, result = 0, digits = 0, remainder;
+
+  printf("Enter number: ");
+  scanf("%d", &n);
+  
+  original = n;
+  
+  while(n != 0){
+    n = n / 10;
+    digits++;
+  }
+  
+  n = original;
+  
+  while(n != 0){
+    remainder = n % 10;
+    result = result + (int)pow(remainder, digits); 
+    n = n / 10;
+  }
+  
+  if(original == result){
+    printf("ARMSTRONG NUMBER");
+  } else {
+    printf("NOT ARMSTRONG");
+  }
+  
+  return 0;
+}
