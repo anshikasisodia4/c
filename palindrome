@@ -9,7 +9,7 @@
       original=n;
       while(n!=0){
         remainder=n%10;
-        reverse= reverse + remainder;
+        reverse= reverse*10 + remainder;
         n=n/10;
       }
       if(original = reverse){
