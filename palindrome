@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+     int main(){
+      int n, reverse=0,remainder,original;
+
+      printf("enter number:");
+      scanf("%d",&n);
+
+      original=n;
+      while(n!=0){
+        remainder=n%10;
+        reverse= reverse + remainder;
+        n=n/10;
+      }
+      if(original = reverse){
+        printf(" PALINDROME NUMBER");
+      }else{
+        printf("NOT PALINDROME");
+      }
+
+      return 0;
+      }
