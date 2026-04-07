@@ -1,0 +1,28 @@
+
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+ int a,b,c,D;
+ int root1, root2, realpart,imagpart;
+ printf("enter coefficients of quadratic equation:");
+ scanf("%d %d %d",&a, &b ,&c);
+
+ D=b*b-4*a*c;
+ if(D>0){
+  root1=(-b+sqrt(b*b-4*a*c))/2*a;
+  root2=((-b-sqrt(D)))/2*a;
+  printf("two real and distinct roots are:%d and %d\n",root1, root2);
+ }else if(D==0){
+  root1=root2=(-b)/2*a;
+  printf("real and equal roots are %d and %d\n",root1 ,root1);
+ }else{
+  realpart =(-b)/2*a;
+  imagpart=(sqrt(-D)/2*a);
+  printf("complex roots are :");
+  printf("%d+i%d\n", realpart, imagpart);
+  printf("%d-i%d\n", realpart, imagpart);
+ }
+ 
+ return 0;
+}
